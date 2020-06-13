@@ -1,0 +1,66 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "title": "The root schema",
+  "description": "The root schema comprises the entire JSON document.",
+  "default": {},
+  "examples": [
+    {
+      "name": "Jhon",
+      "age": 100,
+      "bornCity": "",
+      "employerName": ""
+    }
+  ],
+  "required": [
+    "name",
+    "age",
+    "employerName"
+  ],
+  "additionalProperties": true,
+  "properties": {
+    "name": {
+      "$id": "#/properties/name",
+      "type": "string",
+      "title": "The name schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "Jhon"
+      ]
+    },
+    "age": {
+      "$id": "#/properties/age",
+      "type": "integer",
+      "title": "The age schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": 0,
+      "examples": [
+        100
+      ],
+      "maximum": 100,
+      "minimum": 18
+    },
+    "bornCity": {
+      "$id": "#/properties/bornCity",
+      "type": "string",
+      "title": "The bornCity schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        ""
+      ]
+    },
+    "employerName": {
+      "$id": "#/properties/employerName",
+      "type": "string",
+      "title": "The employerName schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        ""
+      ]
+    }
+  }
+}
