@@ -9,7 +9,7 @@ public class Employee implements Serializable {
     // This serialVersionUID field is necessary for Serializable as well as Externalizable to provide version control,
     // Compiler will provide this field if we do not provide it which might change if we modify the class structure of our class, and we will get InvalidClassException,
     // If we provide value to this field and do not change it, serialization-deserialization will not fail if we change our class structure.
-    private static final long serialVersionUID = 2L;
+    private static final long serialVersionUID = 64656L;
     private final String firstName; // Serialization process do not invoke the constructor but it can assign values to final fields
     private final String middleName;
     private final String lastName;
@@ -25,7 +25,7 @@ public class Employee implements Serializable {
     }
     private void validateAge() {
         System.out.println("Validating age.");
-        if (age < 18 || age > 100) {
+        if (age < 18 || age > 200) {
             throw new IllegalArgumentException("Not a valid age to create an employee");
         }
     }

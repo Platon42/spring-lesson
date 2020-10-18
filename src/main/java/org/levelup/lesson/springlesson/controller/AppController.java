@@ -45,17 +45,19 @@ public class AppController {
     @PostMapping("/adult-checker")
     public @ResponseBody
     String adultChecker(@RequestBody @Validated User user) throws JsonProcessingException {
+    //String adultChecker(@RequestBody String raw) throws JsonProcessingException {
         ServiceAnswer serviceAnswer = new ServiceAnswer();
 
-        //ValidationResult validationResult = schemaValidator.validateSchema(raw);
-        //Set<ValidationMessage> messages = validationResult.getValidationMessages();
-        //if (!messages.isEmpty()) {
-        //    return objectMapper.writeValueAsString(messages);
-        //}
-        //User user = objectMapper.readValue(raw, User.class);
-        String s = objectMapper.writeValueAsString(user);
-        JsonNode jsonNode = objectMapper.readTree(s);
-        System.out.println(s);
+      //  ValidationResult validationResult = schemaValidator.validateSchema(raw);
+      //  Set<ValidationMessage> messages = validationResult.getValidationMessages();
+      //  if (!messages.isEmpty()) {
+      //      return objectMapper.writeValueAsString(messages);
+      //  }
+     //   User user = objectMapper.readValue(raw, User.class);
+
+//        String s = objectMapper.writeValueAsString(user);
+  //      JsonNode jsonNode = objectMapper.readTree(s);
+    //    System.out.println(s);
 
         return String.valueOf(user.getAge());
 //        if (userService.isAdult(user) == null) {

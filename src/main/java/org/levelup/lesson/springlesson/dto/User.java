@@ -5,6 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.ToString;
+import org.hibernate.validator.constraints.CreditCardNumber;
 import org.springframework.validation.annotation.Validated;
 
 import javax.validation.constraints.Email;
@@ -28,6 +29,6 @@ public class User {
 
     @NotNull
     private String bornCity;
-    @Email
+    //@Email
     private String employerName;
 }

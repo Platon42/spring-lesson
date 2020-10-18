@@ -7,8 +7,8 @@
   "default": {},
   "examples": [
     {
-      "name": "Jhon",
-      "age": 100,
+      "name": "",
+      "age": 0,
       "bornCity": "",
       "employerName": ""
     }
@@ -16,9 +16,9 @@
   "required": [
     "name",
     "age",
+    "bornCity",
     "employerName"
   ],
-  "additionalProperties": true,
   "properties": {
     "name": {
       "$id": "#/properties/name",
@@ -27,19 +27,17 @@
       "description": "An explanation about the purpose of this instance.",
       "default": "",
       "examples": [
-        "Jhon"
+        ""
       ]
     },
     "age": {
-      "$id": "#/properties/age",
-      "type": "integer",
-      "title": "The age schema",
-      "description": "An explanation about the purpose of this instance.",
       "default": 0,
+      "description": "An explanation about the purpose of this instance.",
       "examples": [
-        100
+        0
       ],
-      "maximum": 100,
+      "title": "The age schema",
+      "maximum": 70,
       "minimum": 18
     },
     "bornCity": {
@@ -62,5 +60,6 @@
         ""
       ]
     }
-  }
+  },
+  "additionalProperties": true
 }
